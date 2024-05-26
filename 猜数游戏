@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>猜数游戏</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  </head>
+
+  <body>
+    <py-script>
+        import random
+        i=0
+        caishu=random.randint(1,999)
+        while True:
+           i=i+1
+           say=print("这是你第"+ str(i) +"次猜数")
+           answer=int(input("请输入你猜的数："))
+           if answer>caishu:
+              print("猜得太大了，请继续猜")
+           if answer<caishu:
+              print("猜得太小了，请继续猜")
+           if answer==caishu:
+              print("猜对了！")
+              print("  ")
+              print("继续猜下一个数")
+              print("  ")
+              i=0
+              caishu=random.randint(1,999)
+    </py-script>
+  </body>
+</html>
